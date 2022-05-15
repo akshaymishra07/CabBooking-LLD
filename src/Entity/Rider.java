@@ -11,11 +11,10 @@ public class Rider {
     private Location location;
     private List<Ride> rides;
 
-    public Rider(int id, String name, Location location, List<Ride> rides) {
+    public Rider(int id, String name, Location location) {
         this.id = id;
         this.name = name;
         this.location = location;
-        this.rides = rides;
     }
 
     public int getId() {
@@ -48,5 +47,15 @@ public class Rider {
 
     public void setRides(List<Ride> rides) {
         this.rides = rides;
+    }
+
+    @Override
+    public String toString() {
+        return "Rider{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", location=" + location +
+                ", rides=" + rides +
+                '}';
     }
 }

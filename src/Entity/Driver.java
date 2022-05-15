@@ -4,24 +4,16 @@ import utils.Location;
 
 public class Driver {
   private int id;
-  private int name;
+  private String name;
   private Location location;
   private Vehicle vehicle;
   private boolean availability;
 
-  public Driver(int id, int name, Location location, Vehicle vehicle, boolean availability) {
+  public Driver(int id, String name, Location location, Vehicle vehicle, boolean availability) {
     this.id = id;
     this.name = name;
     this.location = location;
     this.vehicle = vehicle;
-    this.availability = availability;
-  }
-
-  public boolean isAvailability() {
-    return availability;
-  }
-
-  public void setAvailability(boolean availability) {
     this.availability = availability;
   }
 
@@ -33,11 +25,11 @@ public class Driver {
     this.id = id;
   }
 
-  public int getName() {
+  public String getName() {
     return name;
   }
 
-  public void setName(int name) {
+  public void setName(String name) {
     this.name = name;
   }
 
@@ -55,5 +47,24 @@ public class Driver {
 
   public void setVehicle(Vehicle vehicle) {
     this.vehicle = vehicle;
+  }
+
+  public boolean isAvailability() {
+    return availability;
+  }
+
+  public void setAvailability(boolean availability) {
+    this.availability = availability;
+  }
+
+  @Override
+  public String toString() {
+    return "Driver{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", location=" + location +
+            ", vehicle=" + vehicle +
+            ", availability=" + availability +
+            '}';
   }
 }

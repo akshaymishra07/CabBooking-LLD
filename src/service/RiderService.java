@@ -11,6 +11,10 @@ public class RiderService {
   BookingService bookingService = new BookingService();
   RiderRepository riderRepository = new RiderRepository();
 
+  public void save(Rider rider){
+    riderRepository.save(rider);
+  }
+
   public Ride bookRide(Rider rider, Location destination) {
 
     Ride ride = bookingService.bookRide(rider.getLocation(), destination);

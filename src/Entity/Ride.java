@@ -47,4 +47,14 @@ public class Ride {
   public void setDestination(Location destination) {
     this.destination = destination;
   }
+
+  @Override
+  public String toString() {
+    return "Ride{" +
+            "driver=" + driver +
+            ", status=" + status +
+            ", source=" + source +
+            ", destination=" + destination +
+            '}';
+  }
 }

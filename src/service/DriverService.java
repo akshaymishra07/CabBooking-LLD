@@ -11,6 +11,10 @@ public class DriverService {
 
   DriverRepository driverRepository = new DriverRepository();
 
+  public void save(Driver driver) {
+    driverRepository.save(driver);
+  }
+
   public void setToUnavailable(Driver driver) {
     driverRepository.setUnavailable(driver);
   }
@@ -28,7 +32,8 @@ public class DriverService {
 
     for (Driver d : drivers) {
 
-      if (CalculateDistance.pickupPossible(d.getLocation(), riderLocation) && d.isAvailability() == true) {
+      if (CalculateDistance.pickupPossible(d.getLocation(), riderLocation)
+          && d.isAvailability() == true) {
         return d;
       }
     }

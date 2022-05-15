@@ -16,7 +16,41 @@ Fetch history of all rides taken by a rider.
 End the Trip
 */
 
+import Entity.*;
+import service.DriverService;
+import service.RiderService;
+import utils.Location;
+
 public class CabBookingApplication {
 
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+
+    DriverService driverService = new DriverService();
+    RiderService riderService = new RiderService();
+
+    driverService.save(new Driver(1, "D1",
+            new Location(12, 16),
+            new Vehicle("KA23W5565", "Swift Dzire", VehicleCategory.SEDAN), true));
+
+    driverService.save(new Driver(2, "D2",
+            new Location(20, 11),
+            new Vehicle("KA23W5235", "Baleno", VehicleCategory.HATCHBACK), true));
+
+    driverService.save(new Driver(3, "D3",
+            new Location(12, 9),
+            new Vehicle("KA23W5415", "Mhindra Xylo", VehicleCategory.SUV), true));
+
+    driverService.save(new Driver(4, "D4",
+            new Location(12, 12),
+            new Vehicle("KA23W55325", "Audi A4", VehicleCategory.PRIME), true));
+
+
+    Rider rider = new Rider(1,"R1", new Location(12,11));
+    riderService.save(rider);
+
+    Ride ride = riderService.bookRide(rider, new Location(23,25));
+
+    System.out.println(ride);
+
+  }
 }

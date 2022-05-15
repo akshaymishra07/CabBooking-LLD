@@ -34,4 +34,13 @@ public class Vehicle {
   public void setCategory(VehicleCategory category) {
     this.category = category;
   }
+
+  @Override
+  public String toString() {
+    return "Vehicle{" +
+            "number='" + number + '\'' +
+            ", model='" + model + '\'' +
+            ", category=" + category +
+            '}';
+  }
 }

@@ -12,6 +12,8 @@ public class CalculateDistance {
 
     int distance = (int) Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
 
-    return distance <= MAX_DISTANCE ? true : false;
+    return true;
+
+    //return distance <= MAX_DISTANCE ? true : false;
   }
 }
