@@ -16,6 +16,7 @@ public class BookingService {
     if (driver == null) {
       return null;
     }
+
     driverService.setToUnavailable(driver);
     return new Ride(driver, BookingStatus.BOOKED, riderLocation, destination);
   }

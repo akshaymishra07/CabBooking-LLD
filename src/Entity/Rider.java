@@ -11,10 +11,11 @@ public class Rider {
     private Location location;
     private List<Ride> rides;
 
-    public Rider(int id, String name, Location location) {
+    public Rider(int id, String name, Location location, List<Ride> rides) {
         this.id = id;
         this.name = name;
         this.location = location;
+        this.rides = rides;
     }
 
     public int getId() {

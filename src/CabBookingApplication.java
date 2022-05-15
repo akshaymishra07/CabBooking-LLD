@@ -21,6 +21,8 @@ import service.DriverService;
 import service.RiderService;
 import utils.Location;
 
+import java.util.ArrayList;
+
 public class CabBookingApplication {
 
   public static void main(String[] args) {
@@ -45,12 +47,11 @@ public class CabBookingApplication {
             new Vehicle("KA23W55325", "Audi A4", VehicleCategory.PRIME), true));
 
 
-    Rider rider = new Rider(1,"R1", new Location(12,11));
+    Rider rider = new Rider(1,"R1", new Location(12,11), new ArrayList<>());
     riderService.save(rider);
 
     Ride ride = riderService.bookRide(rider, new Location(23,25));
 
-    System.out.println(ride);
-
+    System.out.println("Booked ride is :"+ride);
   }
 }

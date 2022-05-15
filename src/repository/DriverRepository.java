@@ -8,11 +8,8 @@ import java.util.List;
 
 public class DriverRepository {
 
-  List<Driver> drivers;
-
-  public DriverRepository() {
-    drivers = new ArrayList<>();
-  }
+  static List<Driver> drivers = new ArrayList<>();
+  ;
 
   public void save(Driver driver) {
     drivers.add(driver);
