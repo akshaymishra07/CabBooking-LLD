@@ -1,7 +1,4 @@
-public class CabBookingApplication {
-
-
-  /*
+/*
 The location is represented as a (x, y) coordinate.
 Distance between two points (x1, y1) and(x2, y2) is sqrt((x1-x2)^2 + (y1-y2)^2).
 Platform has decided upon maximum distance a driver has to travel to pickup a rider.
@@ -19,7 +16,7 @@ Fetch history of all rides taken by a rider.
 End the Trip
 */
 
-  public static void main(String[] args) {
+public class CabBookingApplication {
 
-  }
+  public static void main(String[] args) {}
 }

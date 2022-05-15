@@ -1,5 +1,6 @@
 package repository;
 
+import Entity.Ride;
 import Entity.Rider;
 
 import java.util.ArrayList;
@@ -9,11 +10,22 @@ public class RiderRepository {
 
   List<Rider> riders;
 
-  RiderRepository() {
+  public RiderRepository() {
     riders = new ArrayList<>();
   }
 
   public void save(Rider rider) {
     riders.add(rider);
+  }
+
+  public void addRide(Rider rider, Ride ride) {
+
+    for (Rider r : riders) {
+
+      if (r.getId() == rider.getId()) {
+        r.getRides().add(ride);
+        return;
+      }
+    }
   }
 }
