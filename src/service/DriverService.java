@@ -19,6 +19,7 @@ public class DriverService {
     return driverRepository.findAll();
   }
 
+  //remove these 3
   public void setToUnavailable(Driver driver) {
     driverRepository.setUnavailable(driver);
   }
@@ -31,6 +32,7 @@ public class DriverService {
     driverRepository.updateLocation(driver, newLocation);
   }
 
+  //move to booking service
   public Driver matchDriver(Location riderLocation) {
     List<Driver> drivers = driverRepository.findAll();
 

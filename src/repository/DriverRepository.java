@@ -6,13 +6,17 @@ import utils.Location;
 import java.util.ArrayList;
 import java.util.List;
 
+//every repository class must contain only the CRUD methods for that particular entity.
+
+
 public class DriverRepository {
 
   static List<Driver> drivers = new ArrayList<>();
-  ;
 
-  public void save(Driver driver) {
+  // make save method return the driver
+  public Driver save(Driver driver) {
     drivers.add(driver);
+    return driver;
   }
 
   public List<Driver> findAll() {
@@ -29,6 +33,7 @@ public class DriverRepository {
     }
   }
 
+  // move these 3 methods to driver class
   public void setUnavailable(Driver driver) {
 
     for (Driver d : drivers) {

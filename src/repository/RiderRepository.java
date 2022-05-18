@@ -18,6 +18,7 @@ public class RiderRepository {
     riders.add(rider);
   }
 
+  //move to rider class
   public void addRide(Rider rider, Ride ride) {
 
     for (Rider r : riders) {

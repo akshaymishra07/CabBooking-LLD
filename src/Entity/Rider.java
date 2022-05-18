@@ -4,12 +4,14 @@ import utils.Location;
 
 import java.util.List;
 
+//methods for updating or setting new values in the list or map of entity can exist in entities class only.
+
 public class Rider {
 
     private int id;
     private String name;
     private Location location;
-    private List<Ride> rides;
+    private List<Ride> rides;  // list of all the rides taken by this rider
 
     public Rider(int id, String name, Location location, List<Ride> rides) {
         this.id = id;

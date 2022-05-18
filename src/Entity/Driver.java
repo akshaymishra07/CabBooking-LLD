@@ -5,9 +5,9 @@ import utils.Location;
 public class Driver {
   private int id;
   private String name;
-  private Location location;
+  private Location location; // change after ending the ride
   private Vehicle vehicle;
-  private boolean availability;
+  private boolean availability; // change to unavailable after starting a ride
 
   public Driver(int id, String name, Location location, Vehicle vehicle, boolean availability) {
     this.id = id;
